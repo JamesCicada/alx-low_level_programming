@@ -1,11 +1,22 @@
 #include <stdio.h>
 
-int main() {
+/**
+ * main - Entry point
+ *
+ * Description: Prints the numbers from 0 to 9 using putchar
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
     int i;
-    for(i = 0; i < 10; i = i + 1)
-        {
-            putchar(48 + i);
-        }
+
+    for (i = 0; i < 10; i++)
+    {
+        putchar(48 + i);
+    }
+
     putchar('\n');
-    return 0;
+
+    return (0);
 }
