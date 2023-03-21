@@ -12,7 +12,8 @@ char c;
 	for (i = 0; i < 10; i++)
 	{
 	c = 'a';
-	while (c <= 'z') {
+	while (c <= 'z')
+	{
 	_putchar(c);
 	c++;
 	}
