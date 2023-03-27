@@ -2,29 +2,22 @@
 #include <stdlib.h>
 #include <time.h>
 
-/**
- * main - Generates a random password that satisfies the requirements for
- *        101-crackme.
- *
- * Return: 0 on success.
- */
-
 int main(void)
 {
 	int i;
 	char password[9];
 	
-	srand(time(NULL));  // Seed the random number generator with the current time
+	srand(time(NULL));
 
 	for (i = 0; i < 6; i++) {
-		password[i] = 'a' + rand() % 26;  // Generate a random lowercase letter
+		password[i] = 'a' + rand() % 26;
 	}
 
 	for (i = 6; i < 8; i++) {
-		password[i] = '0' + rand() % 10;  // Generate a random digit
+		password[i] = '0' + rand() % 10;
 	}
 
-	password[8] = '\0';  // Null-terminate the string
+	password[8] = '\0';
 
 	printf("%s", password);
 
