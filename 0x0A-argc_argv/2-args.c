@@ -5,8 +5,9 @@
  * @argc: number of arguments passed to the program
  * @argv: array of strings containing the arguments passed to the program
  *
- * Return: 0
+ * Return: always returns 0
  */
+
 int main(int argc, char *argv[])
 {
 	int i;
