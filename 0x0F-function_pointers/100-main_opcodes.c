@@ -3,38 +3,41 @@
 #include <stdlib.h>
 
 /**
- * main.c - A program that prints the opcodes of its own main function.
+ * main - Entry point
  *
- * @author Bard
- * @date 2023-06-21
+ * Description: A program that prints the opcodes
+ *              of its own main function.
+ *              Usage: ./main number_of_bytes
  *
- * Usage: ./main number_of_bytes
+ * @argc: argument counter
+ * @argv: argument vector
  *
- * This program takes a number of bytes as input and prints the opcodes
- * of its own main function for that number of bytes.
- */
+ * Return: Always Successful
+*/
 
 int main(int argc, char *argv[])
 {
-	if (argc != 2) {
-		printf("Error: Incorrect number of arguments\n");
+	int index, nbytes;
+	char *ptr = (char *) main;
+
+	if (argc != 2)
+	{
+		printf("Error\n");
 		exit(1);
 	}
-	
-	int nbytes = atoi(argv[1]);
-	if (nbytes < 0) {
-		printf("Error: Number of bytes must be non-negative\n");
+	nbytes = atoi(argv[1]);
+	if (nbytes < 0)
+	{
+		printf("Error\n");
 		exit(2);
 	}
-	
-	unsigned char *ptr = (unsigned char *)main;
-	
-	for (int index = 0; index < nbytes; index++) {
-		printf("%02x", ptr[index]);
+
+	for (index = 0; index < nbytes; index++)
+	{
+		printf("%02x", ptr[index] & 0xFF);
 		if (index != nbytes - 1)
 			printf(" ");
 	}
 	printf("\n");
-	return 0;
+	return (0);
 }
-
