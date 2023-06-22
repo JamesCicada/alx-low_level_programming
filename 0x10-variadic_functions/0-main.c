@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	int sum;
