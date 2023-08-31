@@ -27,6 +27,6 @@ void print_binary(unsigned long int n)
 
 	if (!starts)
 	{
-		putchar('0')
+		putchar('0');
 	}
 }
